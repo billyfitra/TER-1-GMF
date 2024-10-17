@@ -15,16 +15,27 @@
                 <div class="flex-1">
                     <label class="text-black" for="country">Periode :&nbsp;</label>
                     <select class="bg-white rounded-md border-gray-700 text-black px-2 py-1" id="country">
-                    <option value="">Select Periode</option>
-                    <option value="AF">2024-09</option>
-                    <option value="DZ">2024-08</option>
-                    <option value="AO">2024-07</option>
-                </select>
+                        <option value="">Select Periode</option>
+                        <option value="AF">2024-09</option>
+                        <option value="DZ">2024-08</option>
+                        <option value="AO">2024-07</option>
+                    </select>
+                </div>
+            </div>
+            <div class="flex flex-row space-x-2">
+                <div class="flex-1">
+                    <label class="text-black" for="country">Aircraft Type :&nbsp;</label>
+                    <select class="bg-white rounded-md border-gray-700 text-black px-2 py-1" id="country">
+                        <option value="">Select Type</option>
+                        <option value="AF">2024-09</option>
+                        <option value="DZ">2024-08</option>
+                        <option value="AO">2024-07</option>
+                    </select>
                 </div>
             </div>
             
             <table class="min-w-full bg-white border border-gray-200">
-                <thead class="bg-gray-100">
+                <thead class="bg-gray-100 text-sm">
                     <tr>
                         <th class="px-4 py-2 border border-gray-300"></th>
                         <th class="px-4 py-2 border border-gray-300">2023</th>
@@ -42,7 +53,7 @@
                         <th class="px-4 py-2 border border-gray-300">SEP</th>
                     </tr>
                 </thead>
-                <tbody class="text-center">
+                <tbody class="text-center text-sm">
                     <tr>
                         <td class="px-4 py-2 border border-gray-300">A/C In Fleet</td>
                         <!-- Tambahkan data lainnya -->

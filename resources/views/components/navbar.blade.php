@@ -12,7 +12,6 @@
                         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                         <x-nav-link href="/" :active="request()->is('/')">Home</x-nav-link>
                         <x-nav-link href="/report" :active="request()->is('report')">Report</x-nav-link>
-                        <x-nav-link href="/login" :active="request()->is('login')">Login</x-nav-link>
                         <x-nav-link href="/user" :active="request()->is('user')">User Setting</x-nav-link>
                         <x-nav-link href="https://dashboard-reliability.gmf-aeroasia.co.id/">Techlog Delay</x-nav-link>
                     </div>
@@ -30,8 +29,8 @@
                                 <span class="absolute -inset-1.5"></span>
                                 <span class="sr-only">Open user menu</span>
                                 <img class="h-8 w-8 rounded-full"
-                                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                                    alt="">
+                                    src="https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671142.jpg?size=626&ext=jpg&ga=GA1.1.1767106743.1728522032&semt=ais_hybrid"
+                                    alt="user">
                             </button>
                         </div>
 
@@ -85,21 +84,21 @@
                 aria-current="page">Home</a>
             <a href="/report"
                 class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Report</a>
-            <a href="/delay"
+            <a href="https://dashboard-reliability.gmf-aeroasia.co.id/"
                 class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Delay</a>
-            <a href="/database"
-                class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Database</a>
+            <a href="/user"
+                class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">User Setting</a>
         </div>
         <div class="border-t border-gray-700 pb-3 pt-4">
             <div class="flex items-center px-5">
                 <div class="flex-shrink-0">
                     <img class="h-10 w-10 rounded-full"
-                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                        alt="">
+                        src="https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671142.jpg?size=626&ext=jpg&ga=GA1.1.1767106743.1728522032&semt=ais_hybrid"
+                        alt="user">
                 </div>
                 <div class="ml-3">
-                    <div class="text-base font-medium leading-none text-white">Tom Cook</div>
-                    <div class="text-sm font-medium leading-none text-gray-400">tom@example.com</div>
+                    <div class="text-base font-medium leading-none text-white">Admin</div>
+                    <div class="text-sm font-medium leading-none text-gray-400">12345</div>
                 </div>
             </div>
             <div class="mt-3 space-y-1 px-2">
