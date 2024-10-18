@@ -4,13 +4,13 @@
             <div class="flex items-center">
                 <div class="flex-shrink-0">
                     <img class="h-10 w-18"
-                        src="https://ola.gmf-aeroasia.co.id/assets/gmf_file/img/login/logo_fix.png"
+                        src="{{ asset('images/gmfwhite.png') }}"
                         alt="logo">
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-4">
                         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                        <x-nav-link href="/" :active="request()->is('/')">Home</x-nav-link>
+                        <x-nav-link href="/home" :active="request()->is('home')">Home</x-nav-link>
                         <x-nav-link href="/report" :active="request()->is('report')">Report</x-nav-link>
                         <x-nav-link href="/user" :active="request()->is('user')">User Setting</x-nav-link>
                         <x-nav-link href="https://dashboard-reliability.gmf-aeroasia.co.id/">Techlog Delay</x-nav-link>
@@ -44,7 +44,7 @@
                             role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button"
                             tabindex="-1">
                             <!-- Active: "bg-gray-100", Not Active: "" -->
-                            <a href="/login" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
+                            <a href="/" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
                                 tabindex="-1" id="user-menu-item-2">Sign out</a>
                         </div>
                     </div>
@@ -84,10 +84,10 @@
                 aria-current="page">Home</a>
             <a href="/report"
                 class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Report</a>
+            <a href="/user"
+                class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">User Setting</a>    
             <a href="https://dashboard-reliability.gmf-aeroasia.co.id/"
                 class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Delay</a>
-            <a href="/user"
-                class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">User Setting</a>
         </div>
         <div class="border-t border-gray-700 pb-3 pt-4">
             <div class="flex items-center px-5">
@@ -98,11 +98,11 @@
                 </div>
                 <div class="ml-3">
                     <div class="text-base font-medium leading-none text-white">Admin</div>
-                    <div class="text-sm font-medium leading-none text-gray-400">12345</div>
+                    <div class="text-sm font-medium leading-none text-gray-400">TER-1 GMF</div>
                 </div>
             </div>
             <div class="mt-3 space-y-1 px-2">
-                <a href="/login"
+                <a href="/"
                     class="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white">Sign
                     out</a>
             </div>
