@@ -35,3 +35,7 @@ Route::get('/report/pilot', function () {
 Route::get('/report/cumulative', function () {
     return view('report.cumulative-content'); //Cumulative Flight Hours and Take Off
 })->name('report.cumulative');
+
+Route::get('/report/etops', function () {
+    return view('report.etops-report'); //Etops Reliability Report
+})->name('report.etops');

@@ -7,7 +7,7 @@
         <li><a href="#" class="flex items-center text-blue-500 hover:text-blue-700 sidebar-item" data-url="{{ route('report.aos') }}"><span class="mr-2">➕</span> Aircraft Operation Summary</a></li>
         <li><a href="#" class="flex items-center text-blue-500 hover:text-blue-700 sidebar-item" data-url="{{ route('report.pilot') }}"><span class="mr-2">➕</span> Pilot Report And Technical Delay</a></li>
         <li><a href="#" class="flex items-center text-blue-500 hover:text-blue-700 sidebar-item" data-url="{{ route('report.cumulative') }}"><span class="mr-2">➕</span> Cumulative Flight Hours and Take Off</a></li>
-        <li><a href="#" class="flex items-center text-blue-500 hover:text-blue-700 sidebar-item"><span class="mr-2">➕</span> Etops Reliability Report</a></li>
+        <li><a href="#" class="flex items-center text-blue-500 hover:text-blue-700 sidebar-item" data-url="{{ route('report.etops') }}"><span class="mr-2">➕</span> Etops Reliability Report</a></li>
         <li><a href="#" class="flex items-center text-blue-500 hover:text-blue-700 sidebar-item"><span class="mr-2">➕</span> Etops Event</a></li>
         <li><a href="#" class="flex items-center text-blue-500 hover:text-blue-700 sidebar-item"><span class="mr-2">➕</span> Reliability Graph</a></li>
         <li><a href="#" class="flex items-center text-blue-500 hover:text-blue-700 sidebar-item"><span class="mr-2">➕</span> Engine Operation Summary</a></li>
