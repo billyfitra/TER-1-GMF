@@ -12,7 +12,7 @@
                         <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                         <x-nav-link href="/home" :active="request()->is('home')">Home</x-nav-link>
                         <x-nav-link href="/report" :active="request()->is('report')">Report</x-nav-link>
-                        <x-nav-link href="/user" :active="request()->is('user')">User Setting</x-nav-link>
+                        <x-nav-link href="/user-setting" :active="request()->is('user-setting')">User Setting</x-nav-link>
                         <x-nav-link href="https://dashboard-reliability.gmf-aeroasia.co.id/">Techlog Delay</x-nav-link>
                     </div>
                 </div>
@@ -84,7 +84,7 @@
                 aria-current="page">Home</a>
             <a href="/report"
                 class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Report</a>
-            <a href="/user"
+            <a href="/user-setting"
                 class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">User Setting</a>    
             <a href="https://dashboard-reliability.gmf-aeroasia.co.id/"
                 class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Delay</a>

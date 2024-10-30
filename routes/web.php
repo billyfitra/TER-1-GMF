@@ -1,13 +1,15 @@
 <?php
 
+use App\Http\Controllers;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
+
 
 /* Routes Navigation Bar */
-Route::get('/', [
-    LoginController::class, 'showLoginForm'])
-->name('login');
+Route::get('/', [LoginController::class, 'showLoginForm'])->name('login');
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
@@ -19,9 +21,19 @@ Route::get('/test', function () {
     return view('test', ['title' => 'Testing Area']);
 });
 
-Route::get('/user', function () {
-    return view('user', ['title' => 'User Setting']);
-});
+/*Route::get('/users', function () {
+    return view('users', ['title' => 'User Setting']);
+});*/
+
+/* Routes for User Settings */
+
+Route::get('/user-setting', [Controllers\UserController::class, 'index']);
+
+Route::get('/users/create', [Controllers\UserController::class, 'create']);
+
+Route::post('/users', [Controllers\UserController::class, 'store']);
+
+Route::get('/users/{id}', [Controllers\UserController::class, 'show']);
 
 /* Routes Modul pada Report */
 Route::get('/report/aos', function () {
