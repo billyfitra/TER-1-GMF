@@ -9,7 +9,7 @@
     <form action="/users/{{ $user->id }}" method="post" class="mt-6">
         @method('DELETE')
         @csrf
-        <x-users.button type="submit">
+        <x-users.button class="hover:bg-red-600" type="submit">
             Delete
         </x-users.button>
     </form>
