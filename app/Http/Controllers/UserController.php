@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 
 class UserController extends Controller
 {
@@ -31,7 +32,7 @@ class UserController extends Controller
     {
         User::create($request->validate([
             'name' => ['Required', 'min:3', 'max:255', 'string'],
-            'email' => ['Required', 'email'],
+            'email' => ['Required', 'email', Rule::unique('users', 'email')],
             'Position' => ['Required', 'min:3', 'max:255', 'string'],
             'password' => ['Required', 'min:8'],
         ]));
@@ -42,10 +43,8 @@ class UserController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show($id)
+    public function show(User $user)
     {
-        $user = User::findOrFail($id);
-
         return view('/users/show', [
             'user' => $user,
         ]);
@@ -54,24 +53,35 @@ class UserController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(User $user)
     {
-        //
+        return view('users.edit', [
+            'user' => $user,
+        ]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, User $user)
     {
-        //
+        $user->update($request->validate([
+            'name' => ['Required', 'min:3', 'max:255', 'string'],
+            'email' => ['Required', 'email'],
+            'Position' => ['Required', 'min:3', 'max:255', 'string'],
+            'password' => ['Required', 'min:8'],
+        ]));
+
+        return redirect('/user-setting');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(User $user)
     {
-        //
+        $user->delete();
+
+        return redirect('/user-setting');
     }
 }

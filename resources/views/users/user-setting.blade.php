@@ -26,7 +26,6 @@
                     <x-table.th>Position</x-table.th>
                     <x-table.th>Email</x-table.th>
                     <x-table.th>Password</x-table.th>
-                    <x-table.th>Created At</x-table.th>
                     <x-table.th>Action</x-table.th>
                 </tr>
             </x-table.thead>
@@ -38,11 +37,10 @@
                         <x-table.td>{{ $user->Position }}</x-table.td>
                         <x-table.td>{{ $user->email }}</x-table.td>
                         <x-table.td>{{ $user->password }}</x-table.td>
-                        <x-table.td>{{ $user->created_at->format('d M Y') }}</x-table.td>
                         <x-table.td>
                             <a href="/users/{{ $user->id }}" class="hover:text-black">View</a>
                             |
-                            <a href="#" class="hover:text-red-500">Delete</a>
+                            <a href="/users/{{ $user->id }}/edit" class="hover:text-blue-500">Edit</a>
                         </x-table.td>
                     </tr>
                 @endforeach

@@ -21,19 +21,26 @@ Route::get('/test', function () {
     return view('test', ['title' => 'Testing Area']);
 });
 
-/*Route::get('/users', function () {
-    return view('users', ['title' => 'User Setting']);
-});*/
+
+
+
 
 /* Routes for User Settings */
-
 Route::get('/user-setting', [Controllers\UserController::class, 'index']);
 
 Route::get('/users/create', [Controllers\UserController::class, 'create']);
 
 Route::post('/users', [Controllers\UserController::class, 'store']);
 
-Route::get('/users/{id}', [Controllers\UserController::class, 'show']);
+Route::get('/users/{user:id}', [Controllers\UserController::class, 'show']);
+
+Route::get('/users/{user:id}/edit', [Controllers\UserController::class, 'edit']);
+
+Route::put('/users/{user:id}', [Controllers\UserController::class, 'update']);
+
+Route::delete('/users/{user:id}', [Controllers\UserController::class, 'destroy']);
+
+
 
 /* Routes Modul pada Report */
 Route::get('/report/aos', function () {
